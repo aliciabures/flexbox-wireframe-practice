@@ -1,9 +1,15 @@
+
+
+  * {
+    flex: 1 100%;
+  }
 body{
     color:white;
     background-color: gray;
     text-align: center;
     display:flex;
-    flex-direction: column;
+    flex-flow:row wrap;
+    
     justify-content: space-evenly;
     
     
@@ -17,7 +23,7 @@ margin:1em;
 
 background-color: mediumvioletred;
 border-radius: 20px;
-height:150px;
+height:3em;
 font-size:3rem;
 margin-top:2em;
 padding:1em;
@@ -26,11 +32,8 @@ padding:1em;
 div {
 
 margin:1rem;
-
-flex-direction: column;
 background-color:mediumaquamarine;
 border-radius: 20px;
-justify-content: space-between;
 font-size: 3rem;
 
 
@@ -41,7 +44,7 @@ article {
 margin:.5em;
 background-color: rgb(244, 56, 103);
 border-radius: 20px;
-height:150px;
+height:3em;
 padding:1em;
 
 }
@@ -52,8 +55,8 @@ margin:1em;
 background-color: rgb(87, 87, 221);
 border-radius: 20px;
 font-size:3em;
-height:150px;
 padding:1em;
+
 }
 
 footer {
@@ -62,9 +65,21 @@ footer {
 background-color: rgb(227, 93, 45);
 border-radius: 20px;
 font-size:3em;
-height:150px;
+height:3em;
 margin-bottom:2em;
 margin-left:1em;
 margin-right:1em;
 padding:1em;
+}
+@media only screen and (min-width: 992px) {
+ 
+    .aside { flex: 1 auto; }
+
+header { flex: 1 100% }
+
+div{ order:3; min-width: 60%}
+aside { order: 2; line-height: 10;}
+footer { order: 3; }
+
+
 }
